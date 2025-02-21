@@ -1,11 +1,6 @@
 import pickle
-import nltk
 import pandas as pd
 import numpy as np
-from nltk.tokenize import regexp_tokenize
-from nltk.corpus import stopwords
-from nltk.corpus import wordnet
-from nltk.stem import WordNetLemmatizer
 from gensim.models import Word2Vec, KeyedVectors
 from sklearn.model_selection import train_test_split
 
@@ -67,7 +62,7 @@ def main():
     w2v_model, train_df, test_df = train_word2vec(train_tokens, test_tokens)
 
     # Display the first 50 words in the Word2Vec vocabulary
-    print(sorted(w2v_model.wv.key_to_index.keys())[:50])
+    # print(sorted(w2v_model.wv.key_to_index.keys())[:50])
 
     # Save the Word2Vec model and the word embeddings as pickle files
     with open('../data/w2v_model.pkl', 'wb') as f:
