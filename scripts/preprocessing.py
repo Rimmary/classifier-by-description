@@ -104,7 +104,7 @@ def main():
     The main function that reads the raw data, processes it, and saves the preprocessed data to a pickle file.
     """
     # Load the data from a CSV file into a pandas DataFrame
-    df = pd.read_csv("../data/descriptions.csv")
+    df = pd.read_csv("../data/descriptions_example.csv")
 
     # Drop rows with null values
     df = df.dropna()
